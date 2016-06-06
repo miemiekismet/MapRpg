@@ -1,0 +1,44 @@
+{
+ "name": "大地图",
+ "children": [
+  {
+   "name": "城市1",
+   "children": [
+    {
+     "name": "小弄堂",
+     "children": [
+      {"name": "怪1", "value": 3, "atk": 1},
+      {"name": "怪2", "value": 5, "atk": 1},
+      {"name": "怪3", "value": 9, "atk": 2},
+      {"name": "怪4", "value": 10, "atk": 2}
+     ]
+    },
+    {
+     "name": "大弄堂",
+     "children": [
+      {"name": "怪5", "value": 15, "atk": 5},
+      {"name": "怪6", "value": 15, "atk": 5},
+      {"name": "怪7", "value": 20, "atk": 10},
+      {"name": "怪8", "value": 25, "atk": 10}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "城市2",
+   "children": [
+    {"name": "怪5", "value": 20, "atk": 5},
+    {"name": "怪6", "value": 20, "atk": 5},
+    {
+     "name": "河边",
+     "children": [
+      {"name": "怪7", "value": 25, "atk": 8},
+      {"name": "怪8", "value": 30, "atk": 8},
+      {"name": "怪9", "value": 30, "atk": 10},
+      {"name": "怪10", "value": 50, "atk": 10}
+     ]
+    }
+   ]
+  }
+ ]
+}
