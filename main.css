@@ -260,6 +260,33 @@ blockquote q:after {
   content: "";
 }
 
+/* Common infra */
+.left_bar, .right_bar {
+  height: 20px;
+  position: relative;
+  float: left;
+}
+
+.hp_text {
+  padding-left: 5px;
+  height: 20px;
+  position: absolute;
+  z-index: 2;
+}
+
+.left_bar {
+  background-color: red;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.right_bar {
+  background-color: grey;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Fighting */
 #map {
   position: relative;
 }
@@ -275,11 +302,18 @@ blockquote q:after {
   height: 500px;
 }
 
+#monster_hp {
+  position: relative;
+  top: 21px;
+  left: 615px;
+}
+
 #map_disable_layer.fighting {
   z-index: 1;
   opacity: 1;
 }
 
+/* Hero info */
 #hero_base, #hero_level {
   display: inline;
 }

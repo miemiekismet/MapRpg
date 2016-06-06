@@ -148,10 +148,10 @@ d3.json("map.json", function(root) {
           if (d._children) {
             return d.name;
           } else {
-            return d.name + "   hp: " + d.value;
+            return d.name + " HP: " + d.value;
           }
         })
-        .call(text);
+        .call(rect);
 
     function transition(d) {
       if (transitioning || !d) return;
