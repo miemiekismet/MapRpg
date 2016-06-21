@@ -2,40 +2,46 @@
  "name": "大地图",
  "children": [
   {
-   "name": "城市1",
+   "name": "道吉市",
    "children": [
     {
-     "name": "小弄堂",
+     "name": "草丛",
      "children": [
-      {"name": "怪1", "value": 3, "atk": 1},
-      {"name": "怪2", "value": 5, "atk": 1},
-      {"name": "怪3", "value": 9, "atk": 2},
-      {"name": "怪4", "value": 10, "atk": 2}
+      {"name": "小拉达", "value": 3, "atk": 1, "type": "MONSTER"},
+      {"name": "小拉达", "value": 5, "atk": 1, "type": "MONSTER"},
+      {"name": "小拉达", "value": 9, "atk": 2, "type": "MONSTER"},
+      {"name": "武器精炼", "value": 9, "type": "ITEM", "ITEM_TYPE": "ATK", "ITEM_VALUE": 2},
+      {"name": "比比鸟", "value": 10, "atk": 2, "type": "MONSTER"}
      ]
     },
     {
-     "name": "大弄堂",
+     "name": "森林",
      "children": [
-      {"name": "怪5", "value": 15, "atk": 5},
-      {"name": "怪6", "value": 15, "atk": 5},
-      {"name": "怪7", "value": 20, "atk": 10},
-      {"name": "怪8", "value": 25, "atk": 10}
+      {"name": "铁甲蛹", "value": 20, "atk": 3, "type": "MONSTER"},
+      {"name": "铁甲蛹", "value": 30, "atk": 5, "type": "MONSTER"},
+      {"name": "防具精练", "value": 30, "type": "ITEM", "ITEM_TYPE": "DEF", "ITEM_VALUE": 5},
+      {"name": "巴大蝴", "value": 25, "atk": 10, "type": "MONSTER"},
+      {"name": "绿毛虫", "value": 30, "atk": 8, "type": "MONSTER"}
      ]
     }
    ]
   },
   {
-   "name": "城市2",
+   "name": "比尼市",
    "children": [
-    {"name": "怪5", "value": 20, "atk": 5},
-    {"name": "怪6", "value": 20, "atk": 5},
+    {"name": "小拳石", "value": 20, "atk": 10, "type": "MONSTER"},
+    {"name": "小拳石", "value": 25, "atk": 10, "type": "MONSTER"},
+    {"name": "提升生命值", "value": 50, "type": "ITEM", "ITEM_TYPE": "HP", "ITEM_VALUE": 5},
+    {"name": "独角虫", "value": 25, "atk": 12, "type": "MONSTER"},
+    {"name": "大岩蛇", "value": 50, "atk": 15, "type": "MONSTER"},
     {
-     "name": "河边",
+     "name": "月见山",
      "children": [
-      {"name": "怪7", "value": 25, "atk": 8},
-      {"name": "怪8", "value": 30, "atk": 8},
-      {"name": "怪9", "value": 30, "atk": 10},
-      {"name": "怪10", "value": 50, "atk": 10}
+      {"name": "超音蝠", "value": 40, "atk": 15, "type": "MONSTER"},
+      {"name": "小磁怪", "value": 50, "atk": 20, "type": "MONSTER"},
+      {"name": "武器精练", "value": 80, "type": "ITEM", "ITEM_TYPE": "ATK", "ITEM_VALUE": 5},
+      {"name": "皮皮", "value": 40, "atk": 25, "type": "MONSTER"},
+      {"name": "火箭队", "value": 100, "atk": 30, "type": "MONSTER"}
      ]
     }
    ]

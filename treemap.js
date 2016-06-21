@@ -1,5 +1,5 @@
 
-var margin = {top: 20, right: 0, bottom: 0, left: 0},
+var margin = {top: 30, right: 0, bottom: 0, left: 0},
     width = 960,
     height = 500 - margin.top - margin.bottom,
     formatNumber = d3.format(",d"),
@@ -28,7 +28,7 @@ var svg = d3.select("#map").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
     .style("shape-rendering", "crispEdges");
 
-var disable_layer = d3.select("#map_disable_layer")
+var disable_layer = d3.select("#fighting_layer")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.bottom + margin.top)
     .attr("z-index", 1)
@@ -46,9 +46,9 @@ grandparent.append("rect")
     .attr("height", margin.top);
 
 grandparent.append("text")
-    .attr("x", 6)
-    .attr("y", 6 - margin.top)
-    .attr("dy", ".75em");
+    .attr("x", 9)
+    .attr("y", 9 - margin.top)
+    .attr("dy", "1em");
 
 d3.json("map.json", function(root) {
   initialize(root);
@@ -121,10 +121,17 @@ d3.json("map.json", function(root) {
         .classed("children", true)
         .on("click", transition);
 
-    g.filter(function(d) { return !d._children; })
+    g.filter(function(d) { return !d._children && d.type == "MONSTER";})
         .classed("children", true)
         .on("click", function(d) {
           Fight(d, transition);
+        });
+
+    g.filter(function(d) { return !d._children && d.type == "ITEM";})
+        .classed("children", true)
+        .classed("item", true)
+        .on("click", function(d) {
+          Purchase(d, transition);
         });
 
     g.filter(function(d) { return d.beaten; })
@@ -147,8 +154,10 @@ d3.json("map.json", function(root) {
         .text(function(d) {
           if (d._children) {
             return d.name;
-          } else {
+          } else if (d.type == "MONSTER") {
             return d.name + " HP: " + d.value;
+          } else if (d.type == "ITEM") {
+            return d.name + " +" + d["ITEM_TYPE"] + ": " + d["ITEM_VALUE"] + " PRICE: $" + d.value;
           }
         })
         .call(rect);
